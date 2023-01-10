@@ -1,0 +1,7 @@
+{
+  "admin":
+          [
+            {"url": "../docs/openapi3.json","name": "member"}
+          ]
+}
+

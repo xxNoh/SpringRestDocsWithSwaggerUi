@@ -1,0 +1,166 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "API DOCS",
+    "description" : "My API description",
+    "version" : "0.1.0"
+  },
+  "servers" : [ {
+    "url" : "https://localhost:8080"
+  } ],
+  "tags" : [ ],
+  "paths" : {
+    "/member" : {
+      "get" : {
+        "tags" : [ "member" ],
+        "summary" : "멤버 전체 조회",
+        "description" : "맴버 전체 조회",
+        "operationId" : "get",
+        "responses" : {
+          "200" : {
+            "description" : "200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/member-1417500952"
+                },
+                "examples" : {
+                  "get" : {
+                    "value" : "[{\"id\":1,\"name\":\"spring\"},{\"id\":1,\"name\":\"spring\"}]"
+                  },
+                  "get All Members" : {
+                    "value" : "[{\"id\":1,\"name\":\"spring\"},{\"id\":1,\"name\":\"spring\"}]"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "member" ],
+        "summary" : "멤버 저장",
+        "description" : "멤버 저장",
+        "operationId" : "post",
+        "requestBody" : {
+          "content" : {
+            "application/json;charset=UTF-8" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/member-321648407"
+              },
+              "examples" : {
+                "post" : {
+                  "value" : "{\"name\":\"spring\"}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/member-593493387"
+                },
+                "examples" : {
+                  "post" : {
+                    "value" : "{\"id\":0}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/member/{id}" : {
+      "get" : {
+        "tags" : [ "member" ],
+        "summary" : "멤버 단일 조회",
+        "description" : "멤버 단일 조회",
+        "operationId" : "get member",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/member-id-1401691009"
+                },
+                "examples" : {
+                  "get member" : {
+                    "value" : "{\"id\":1,\"name\":\"spring\"}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "member-593493387" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "number",
+            "description" : "아이디"
+          }
+        }
+      },
+      "member-1417500952" : {
+        "type" : "array",
+        "description" : "array",
+        "items" : {
+          "type" : "object",
+          "properties" : {
+            "name" : {
+              "type" : "string",
+              "description" : "이름"
+            },
+            "id" : {
+              "type" : "number",
+              "description" : "아이디"
+            }
+          },
+          "description" : "array"
+        }
+      },
+      "member-id-1401691009" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string",
+            "description" : "이름"
+          },
+          "id" : {
+            "type" : "number",
+            "description" : "아이디"
+          }
+        }
+      },
+      "member-321648407" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string",
+            "description" : "이름"
+          }
+        }
+      }
+    }
+  }
+}
