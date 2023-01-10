@@ -29,7 +29,7 @@
                     "value" : "[{\"id\":1,\"name\":\"spring\"},{\"id\":1,\"name\":\"spring\"}]"
                   },
                   "get All Members" : {
-                    "value" : "[{\"id\":1,\"name\":\"spring\"},{\"id\":1,\"name\":\"spring\"}]"
+                    "value" : "[{\"id\":1,\"name\":\"spring\"},{\"id\":2,\"name\":\"spring2\"}]"
                   }
                 }
               }
@@ -50,7 +50,7 @@
               },
               "examples" : {
                 "post" : {
-                  "value" : "{\"name\":\"spring\"}"
+                  "value" : "{\"name\":\"test\"}"
                 }
               }
             }
@@ -62,11 +62,11 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/member-593493387"
+                  "$ref" : "#/components/schemas/member-id-1401691009"
                 },
                 "examples" : {
                   "post" : {
-                    "value" : "{\"id\":0}"
+                    "value" : "{\"name\":\"test\",\"id\":0}"
                   }
                 }
               }
@@ -112,15 +112,6 @@
   },
   "components" : {
     "schemas" : {
-      "member-593493387" : {
-        "type" : "object",
-        "properties" : {
-          "id" : {
-            "type" : "number",
-            "description" : "아이디"
-          }
-        }
-      },
       "member-1417500952" : {
         "type" : "array",
         "description" : "array",

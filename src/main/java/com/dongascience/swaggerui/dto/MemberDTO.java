@@ -9,13 +9,11 @@ public class MemberDTO {
     @Getter
     @Setter
     public static class Request {
-        private long id;
         private String name;
 
         public Member toEntity() {
             Member member = Member.builder()
-                    .id(id)
-                    .name(name)
+                    .name(this.name)
                     .build();
             return member;
         };
